@@ -1,0 +1,30 @@
+// colors
+$white: #ffffff;
+$orange: #f04200;
+
+$body-color: $white;
+$body-bg: #2b2b2b;
+
+$primary: $orange;
+
+// scrollbar
+$scrollbar-radius: 10px;
+$scrollbar-truck: #191b28;
+$scrollbar-thumb: #32354b;
+$scrollbar-thumb-hover: #191b28;
+
+// shape
+$shape-width: 400px;
+$shape-width-percentage: calc((10 * #{$shape-width}) / 100);
+$shape-border-width: max(3px, calc((#{$shape-width-percentage} / 2) - 5px));
+$shape-border-width-mobile: 1.5vw;
+$inner-shape-width: 76%;
+
+// radius
+$radius-circle: 50%;
+
+//css variable
+:root{
+  --shape-border-width: #{$shape-border-width};
+  --inner-shape-width: #{$inner-shape-width};
+}

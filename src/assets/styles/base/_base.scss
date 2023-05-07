@@ -1,0 +1,33 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: $body-color;
+  background-color: $body-bg;
+}
+
+#root, .app, body {
+  min-height: 100vh;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// scrollbar
+::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: $scrollbar-truck;
+}
+::-webkit-scrollbar-thumb {
+  background: $scrollbar-thumb;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: lighten($scrollbar-thumb, 10%);
+}

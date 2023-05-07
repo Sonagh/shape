@@ -1,0 +1,51 @@
+.shape {
+  width: $shape-width;
+  position: relative;
+  overflow: hidden;
+  transform: rotate(-6deg);
+  border: solid $primary;
+  border-width: var(--shape-border-width);
+  border-radius: $radius-circle;
+
+  .inner-shape {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    &::after,
+    &::before {
+      content: "";
+      width: var(--inner-shape-width);
+      height: 80%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: $radius-circle;
+      border: solid $primary;
+      border-width: var(--shape-border-width);
+    }
+
+    &::after {
+      top: -29%;
+    }
+
+    &::before {
+      bottom: -29%;
+    }
+
+    &.vertical {
+      transform: rotate(90deg);
+    }
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    aspect-ratio: 1/1;
+  }
+
+  @media (max-width: 767.98px) {
+    --shape-border-width: #{$shape-border-width-mobile};
+    --inner-shape-width: 74%;
+  }
+}

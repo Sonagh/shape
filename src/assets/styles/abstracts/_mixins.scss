@@ -1,0 +1,28 @@
+/* position type */
+@mixin position(
+  $type: null,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null,
+  $zIndex: null
+) {
+  @if $type {
+    position: $type;
+  }
+  @if $top {
+    top: $top;
+  }
+  @if $right {
+    right: $right;
+  }
+  @if $bottom {
+    bottom: $bottom;
+  }
+  @if $left {
+    left: $left;
+  }
+  @if $zIndex {
+    z-index: $zIndex;
+  }
+}
